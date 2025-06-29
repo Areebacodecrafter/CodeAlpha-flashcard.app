@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcard Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    footer {
+      background-color: #2F3D40;
+      color: #fff;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    footer a {
+      color: #F2E0D0;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #ffffff;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <button id="theme-toggle">Toggle Theme</button>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="flashcards">Flashcards</button>
+    <button class="tab" data-tab="manage">Manage Cards</button>
+  </div>
+
+  <div id="flashcards" class="tab-content active">
+    <div class="card">
+      <h2>FLASHCARD</h2>
+      <div class="card-content">
+        <p id="card-text">Click "Show Answer" to begin</p>
+      </div>
+      <button id="show-answer">Show Answer</button>
+    </div>
+    <div class="navigation">
+      <button id="prev">Previous</button>
+      <button id="next">Next</button>
+    </div>
+  </div>
+
+  <div id="manage" class="tab-content">
+    <form id="card-form">
+      <input type="text" id="question" placeholder="Enter question" required />
+      <input type="text" id="answer" placeholder="Enter answer" required />
+      <button type="submit">Add Flashcard</button>
+    </form>
+    <ul id="card-list"></ul>
+  </div>
+
+  <footer>
+    <div>Connect with me:</div>
+    <div>
+      <a href="https://www.instagram.com/_byareebaa/" target="_blank">Instagram</a> 
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
